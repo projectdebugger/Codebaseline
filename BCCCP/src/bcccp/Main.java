@@ -52,7 +52,6 @@ public class Main {
 					@SuppressWarnings("unused")
 					EntryController entryController = 
 							new EntryController(carpark, egate, eos, eis, eui);
-					
 					@SuppressWarnings("unused")
 					PaystationController payController = 
 							new PaystationController(carpark, pui);
@@ -72,6 +71,7 @@ public class Main {
 					xis.setVisible(true);
 					xgate.setVisible(true);
 					xos.setVisible(true);
+					
 					
 				} 
 				catch (Exception e) {

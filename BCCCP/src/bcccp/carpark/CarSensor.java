@@ -5,6 +5,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import bcccp.carpark.entry.EntryController;
+
 import javax.swing.JButton;
 import java.awt.Font;
 import java.awt.Color;
@@ -67,9 +70,13 @@ public class CarSensor extends JFrame implements ICarSensor {
 					detectorButton.setBackground(Color.RED);
 					detectorButton.setText("No Car Detected");
 				}
+				EntryController.getInstance().carEventDetected(detectorId, carDetected);
+				// When ever an event occur, notify the controller
+				/*
 				for (ICarSensorResponder responder : responders ) {
 					responder.carEventDetected(detectorId, carDetected);
-				}
+					}
+				*/
 			}
 		});
 		detectorButton.setBackground(Color.RED);
