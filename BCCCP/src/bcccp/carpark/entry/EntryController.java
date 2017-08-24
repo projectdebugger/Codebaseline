@@ -76,15 +76,14 @@ public class EntryController
 		/* Author: Santosh
 
 		*/
-		public String getBarcode() { 
+	}
+public String getBarcode() { 
    		return barcode; 
   } 
  
   public void setBarcode(String model) { 
    this.barcode = barcode; 
   } 
-	}
-
 
 
 	@Override
