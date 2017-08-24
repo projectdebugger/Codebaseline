@@ -35,10 +35,6 @@ public class EntryUI extends JFrame implements IEntryUI {
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
-<<<<<<< HEAD
-=======
-				
->>>>>>> master
 				try {
 					EntryUI frame = new EntryUI(100, 100);
 					frame.setVisible(true);
@@ -55,10 +51,7 @@ public class EntryUI extends JFrame implements IEntryUI {
 	 * Create the frame.
 	 */
 	public EntryUI(int x, int y) {
-<<<<<<< HEAD
-=======
 		controller = EntryController.getInstance();
->>>>>>> master
 		setTitle("Entry Pillar UI");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(x, y, 340, 710);
@@ -173,12 +166,7 @@ public class EntryUI extends JFrame implements IEntryUI {
 	
 	
 	private void pushButton() {
-<<<<<<< HEAD
-		log("pushButton : calling button pushed");
-		controller.buttonPushed();	
-=======
 		EntryController.getInstance().buttonPushed();	
->>>>>>> master
 	}
 
 	
@@ -191,11 +179,8 @@ public class EntryUI extends JFrame implements IEntryUI {
 	
 	
 	private void takeTicket() {
-<<<<<<< HEAD
-		controller.ticketTaken();
-=======
+
 		EntryController.getInstance().ticketTaken();
->>>>>>> master
 		ticketPrinterTextArea.setText("");
 		seasonTicketTextField.setText("");
 	}

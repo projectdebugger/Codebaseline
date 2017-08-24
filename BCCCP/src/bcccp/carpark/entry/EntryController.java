@@ -1,10 +1,5 @@
 package bcccp.carpark.entry;
-
-<<<<<<< HEAD
-=======
 import java.util.Date;
-
->>>>>>> master
 import bcccp.carpark.Carpark;
 import bcccp.carpark.ICarSensor;
 import bcccp.carpark.ICarSensorResponder;
@@ -17,15 +12,10 @@ public class EntryController
 		implements ICarSensorResponder,
 				   ICarparkObserver,
 		           IEntryController {
-<<<<<<< HEAD
-	
-=======
 	private static EntryController instance;
 	public static EntryController getInstance() {
 		return instance;
 	}
-
->>>>>>> master
 	private IGate entryGate;
 	private ICarSensor outsideSensor; 
 	private ICarSensor insideSensor;
@@ -42,25 +32,18 @@ public class EntryController
 			ICarSensor os, 
 			ICarSensor is,
 			IEntryUI ui) {
-		//TODO Implement constructor
-<<<<<<< HEAD
-=======
 		this.insideSensor = is;
 		this.outsideSensor = os;
 		this.ui = ui;
 		this.carpark = carpark;
 		this.entryGate = entryGate;
 		this.instance = this;
->>>>>>> master
 	}
 
 
 
 	@Override
 	public void buttonPushed() {
-		// TODO Auto-generated method stub
-<<<<<<< HEAD
-=======
 		/* Author: HOANG Van Cuong
 		 * 
 		 * */
@@ -74,9 +57,7 @@ public class EntryController
 			this.ui.printTicket(this.adhocTicket.getCarparkId(), this.adhocTicket.getTicketNo(), new Date().getTime(), this.adhocTicket.getBarcode());
 			this.adhocTicket.enter(new Date().getTime());
 		}
-		System.out.println("Issuing adhoc ticket");
->>>>>>> master
-		
+		System.out.println("Issuing adhoc ticket");		
 	}
 
 
@@ -92,9 +73,6 @@ public class EntryController
 	@Override
 	public void ticketTaken() {
 		// TODO Auto-generated method stub
-<<<<<<< HEAD
-		
-=======
 		/* Author: HOANG, Van Cuong - Project Debuggers
 		 * Adhoc customer takes adhoc ticket. Now raise the barrier
 		 * 
@@ -104,29 +82,15 @@ public class EntryController
 			this.ui.display("");
 			this.ui.beep();
 		}
->>>>>>> master
 	}
-
-
 
 	@Override
 	public void notifyCarparkEvent() {
 		// TODO Auto-generated method stub
 		
 	}
-
-
-
 	@Override
 	public void carEventDetected(String detectorId, boolean detected) {
-		// TODO Auto-generated method stub
-<<<<<<< HEAD
-		
-	}
-
-	
-	
-=======
 		/* Author: HOANG, Van Cuong - project DEbuggers
 		 * 11613699
 		 * 23-08-2017
@@ -148,5 +112,4 @@ public class EntryController
 			entryTime = new Date().getTime();
 		}
 	}
->>>>>>> master
 }

@@ -1,14 +1,6 @@
 package bcccp.tickets.adhoc;
 
-public class AdhocTicketFactory implements IAdhocTicketFactory {
-<<<<<<< HEAD
-
-	@Override
-	public IAdhocTicket make(String carparkId, int ticketNo) {
-		// TODO Auto-generated method stub
-		return null;
-=======
-	
+public class AdhocTicketFactory implements IAdhocTicketFactory {	
 	@Override
 	public IAdhocTicket make(String carparkId, int ticketNo) {
 		// TODO Auto-generated method stub
@@ -21,7 +13,6 @@ public class AdhocTicketFactory implements IAdhocTicketFactory {
 	}
 	public String getRandomBarCode(){
 		return Long.toHexString(Double.doubleToLongBits(Math.random())).substring(0,4).toUpperCase();
->>>>>>> master
 	}
 
 
