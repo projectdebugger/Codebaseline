@@ -39,7 +39,15 @@ public class PaystationController
 	@Override
 	public void ticketTaken() {
 		// TODO Auto-generated method stub
-		
+		/*
+			Author: Santosh
+		*/
+		if(!this.carpark.isPaid()){
+			this.exitGate.raise();
+			this.ui.display("");
+			this.ui.beep();
+		}
+	}
 	}
 
 	
