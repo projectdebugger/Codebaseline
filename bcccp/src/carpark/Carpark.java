@@ -1,11 +1,11 @@
-package bcccp.carpark;
+package carpark;
 
 import java.util.List;
 
-import bcccp.tickets.adhoc.IAdhocTicket;
-import bcccp.tickets.adhoc.IAdhocTicketDAO;
-import bcccp.tickets.season.ISeasonTicket;
-import bcccp.tickets.season.ISeasonTicketDAO;
+import tickets.adhoc.IAdhocTicket;
+import tickets.adhoc.IAdhocTicketDAO;
+import tickets.season.ISeasonTicket;
+import tickets.season.ISeasonTicketDAO;
 
 public class Carpark implements ICarpark {
 	
@@ -22,18 +22,6 @@ public class Carpark implements ICarpark {
 			IAdhocTicketDAO adhocTicketDAO, 
 			ISeasonTicketDAO seasonTicketDAO) {
 		//TODO Implement constructor
-<<<<<<< HEAD
-=======
-		/* Author: HOANG, Van Cuong - Project Debugger
-		 * 11613599
-		 * Date: 23-08-2017
-		 * */
-		this.capacity = capacity;
-		this.adhocTicketDAO = adhocTicketDAO;
-		this.carparkId = name;
-		this.seasonTicketDAO = seasonTicketDAO;
-		numberOfCarsParked = 0;
->>>>>>> master
 	}
 
 
@@ -57,11 +45,7 @@ public class Carpark implements ICarpark {
 	@Override
 	public String getName() {
 		// TODO Auto-generated method stub
-<<<<<<< HEAD
 		return null;
-=======
-		return this.carparkId;
->>>>>>> master
 	}
 
 
@@ -69,14 +53,7 @@ public class Carpark implements ICarpark {
 	@Override
 	public boolean isFull() {
 		// TODO Auto-generated method stub
-<<<<<<< HEAD
 		return false;
-=======
-		if(numberOfCarsParked == capacity)
-			return true;
-		else
-			return false;
->>>>>>> master
 	}
 
 
@@ -84,12 +61,7 @@ public class Carpark implements ICarpark {
 	@Override
 	public IAdhocTicket issueAdhocTicket() {
 		// TODO Auto-generated method stub
-<<<<<<< HEAD
 		return null;
-=======
-		numberOfCarsParked++;
-		return this.adhocTicketDAO.createTicket(this.carparkId);
->>>>>>> master
 	}
 
 
@@ -105,11 +77,7 @@ public class Carpark implements ICarpark {
 	@Override
 	public IAdhocTicket getAdhocTicket(String barcode) {
 		// TODO Auto-generated method stub
-<<<<<<< HEAD
 		return null;
-=======
-		return this.adhocTicketDAO.findTicketByBarcode(barcode);
->>>>>>> master
 	}
 
 
