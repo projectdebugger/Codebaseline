@@ -75,7 +75,6 @@ this.ui = ui;
 		if(this.carpark.isPaid()){
 			this.exitGate.raise();
 			this.ui.display("");
-			this.ui.beep();
 		}
 	}
 	}
