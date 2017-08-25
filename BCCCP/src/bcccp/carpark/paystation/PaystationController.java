@@ -16,6 +16,10 @@ public class PaystationController
 
 	public PaystationController(ICarpark carpark, IPaystationUI ui) {
 		//TODO Implement constructor
+		/*
+Author: Santosh
+
+		*/
 	}
 
 
@@ -25,6 +29,23 @@ public class PaystationController
 		// TODO Auto-generated method stub
 		
 	}
+	public void receiveDetections(Detector.Detections<Barcode> detections) {
+                final SparseArray<Barcode> barcodes = detections.getDetectedItems();
+                if (barcodes.size() != 0) {
+                    String data = barcodes.valueAt(0).displayValue;
+
+                    Log.d(TAG, "Barcode detected: " + data);
+                    this.ui.beep();
+
+                    returnData(data);
+                }
+            }
+        });
+
+        if (!mBarcodeDetector.isOperational())
+            Log.w(TAG, "Detector dependencies are not yet available.");
+    }
+
 
 
 
@@ -42,7 +63,11 @@ public class PaystationController
 		/*
 			Author: Santosh
 		*/
-		
+		if(!this.carpark.isPaid()){
+			this.exitGate.raise();
+			this.ui.display("");
+			this.ui.beep();
+		}
 	}
 	}
 
