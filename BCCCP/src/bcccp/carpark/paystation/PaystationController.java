@@ -73,7 +73,6 @@ this.ui = ui;
 			Author: Santosh
 		*/
 		if(this.carpark.isPaid()){
-			this.exitGate.raise();
 			this.ui.display("");
 		}
 	}
