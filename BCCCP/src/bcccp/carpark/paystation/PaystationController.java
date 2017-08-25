@@ -60,6 +60,8 @@ this.ui = ui;
 		*/
 			if(!this.carpark.isPaid()){
 			this.charge();
+		}else {
+			
 		}
 		
 	}
@@ -73,6 +75,7 @@ this.ui = ui;
 			Author: Santosh
 		*/
 		if(this.carpark.isPaid()){
+			this.exitGate.raise();
 			this.ui.display("");
 		}
 	}
