@@ -38,6 +38,7 @@ this.ui = ui;
 
                     Log.d(TAG, "Barcode detected: " + data);
                     this.ui.beep();
+                    this.charge();
 
                     returnData(data);
                 }
