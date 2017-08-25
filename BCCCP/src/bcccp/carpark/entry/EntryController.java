@@ -81,7 +81,7 @@ public String getBarcode() {
    		return barcode; 
   } 
  
-  public void setBarcode(String model) { 
+  public void setBarcode(String barcode) { 
    this.barcode = barcode; 
   } 
 
