@@ -61,7 +61,7 @@ this.ui = ui;
 			if(!this.carpark.isPaid()){
 			this.charge();
 		}else {
-			
+			return "Thank you for your Payment. Have a Nive Day";
 		}
 		
 	}
