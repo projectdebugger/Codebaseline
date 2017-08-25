@@ -20,7 +20,8 @@ public class PaystationController
 Author: Santosh
 
 		*/
-
+this.carpark = carpark;
+this.ui = ui;
 	}
 
 
