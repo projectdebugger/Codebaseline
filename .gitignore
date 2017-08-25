@@ -1,0 +1,5 @@
+/bcccp/build/
+.DS_Store
+BCCCP/src/.DS_Store
+BCCCP/src/bcccp/carpark/.DS_Store
+codebaseline/.DS_Store
