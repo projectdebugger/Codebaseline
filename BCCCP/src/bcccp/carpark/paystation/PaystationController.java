@@ -40,7 +40,7 @@ this.ui = ui;
                     this.ui.beep();
                     this.charge();
 
-                    returnData(data);
+                    return barcode;
                 }
             }
         });
