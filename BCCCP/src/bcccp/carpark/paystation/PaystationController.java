@@ -20,6 +20,8 @@ public class PaystationController
 Author: Santosh
 
 		*/
+this.carpark=carpark;
+this.ui=ui;
 	}
 
 
@@ -29,7 +31,7 @@ Author: Santosh
 		// TODO Auto-generated method stub
 		
 	}
-	public void receiveDetections(Detector.Detections<Barcode> detections) {
+	public void receiveDetections(Detector.Detections<Barcode> barcode) {
                 final SparseArray<Barcode> barcodes = detections.getDetectedItems();
                 if (barcodes.size() != 0) {
                     String data = barcodes.valueAt(0).displayValue;
