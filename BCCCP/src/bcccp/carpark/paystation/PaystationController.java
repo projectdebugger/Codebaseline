@@ -24,7 +24,7 @@ this.carpark = carpark;
 this.ui = ui;
 	}
 public IPaystationUI getui{
-
+return ui;
 }
 
 
