@@ -26,7 +26,9 @@ this.ui = ui;
 public IPaystationUI getui{
 return ui;
 }
-
+public void setui (IPaystationUI ui) {
+	
+}
 
 	@Override
 	public void ticketInserted(String barcode) {
