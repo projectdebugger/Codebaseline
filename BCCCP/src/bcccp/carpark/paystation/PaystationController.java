@@ -45,9 +45,9 @@ this.ui = ui;
             }
         });
 
-        if (!mBarcodeDetector.isOperational())
-            Log.w(TAG, "Detector dependencies are not yet available.");
-    }
+        //if (!mBarcodeDetector.isOperational())
+         //   Log.w(TAG, "Detector dependencies are not yet available.");
+    //}
 
 
 
