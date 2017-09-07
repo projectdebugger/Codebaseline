@@ -23,7 +23,9 @@ Author: Santosh
 this.carpark = carpark;
 this.ui = ui;
 	}
+public IPaystationUI getui{
 
+}
 
 
 	@Override
@@ -74,6 +76,7 @@ this.ui = ui;
 		/*
 			Author: Santosh
 		*/
+
 		if(!this.carpark.isPaid()){
 			this.ui.receiveDetections();
 		}else {
