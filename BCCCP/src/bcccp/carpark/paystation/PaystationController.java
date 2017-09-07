@@ -30,7 +30,7 @@ public void setui (IPaystationUI ui) {
 	this.ui=ui;
 }
 public ICarpark getcarpark() {
-	
+	return carpark;
 }
 	@Override
 	public void ticketInserted(String barcode) {
