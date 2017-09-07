@@ -33,7 +33,7 @@ public ICarpark getcarpark() {
 	return carpark;
 }
 public void setcarpark (ICarpark ui) {
-
+this.carpark=carpark;
 }
 	@Override
 	public void ticketInserted(String barcode) {
