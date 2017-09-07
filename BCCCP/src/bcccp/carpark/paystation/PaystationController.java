@@ -27,7 +27,7 @@ public IPaystationUI getui{
 return ui;
 }
 public void setui (IPaystationUI ui) {
-	
+	this.ui=ui;
 }
 
 	@Override
