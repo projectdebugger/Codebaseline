@@ -35,6 +35,10 @@ public ICarpark getcarpark() {
 public void setcarpark (ICarpark ui) {
 this.carpark=carpark;
 }
+public String toString()
+{
+return (ui + " " + carpark);
+}
 	@Override
 	public void ticketInserted(String barcode) {
 		// TODO Auto-generated method stub
