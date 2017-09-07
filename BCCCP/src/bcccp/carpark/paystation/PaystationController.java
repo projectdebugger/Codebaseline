@@ -23,13 +23,15 @@ Author: Santosh
 this.carpark = carpark;
 this.ui = ui;
 	}
-public IPaystationUI getui{
+public IPaystationUI getui(){
 return ui;
 }
 public void setui (IPaystationUI ui) {
 	this.ui=ui;
 }
-
+public ICarpark getcarpark() {
+	
+}
 	@Override
 	public void ticketInserted(String barcode) {
 		// TODO Auto-generated method stub
