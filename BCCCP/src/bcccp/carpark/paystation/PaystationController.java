@@ -32,7 +32,7 @@ this.ui = ui;
 		
 	}
 	public void receiveDetections(Detector.Detections<Barcode> barcode) {
-                final SparseArray<Barcode> barcode = detections.getDetectedItems();
+                //final SparseArray<Barcode> barcode = detections.getDetectedItems();
                 if (barcodes.size() != 0) {
                     String data = barcode.valueAt(0).displayValue;
 
