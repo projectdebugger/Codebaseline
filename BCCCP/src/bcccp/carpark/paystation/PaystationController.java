@@ -74,9 +74,12 @@ this.ui = ui;
 		/*
 			Author: Santosh
 		*/
-		if(this.carpark.isPaid()){
+		if(!this.carpark.isPaid()){
+			this.ui.receiveDetections();
+		}else {
 			this.exitGate.raise();
 			//this.ui.display("");
+		}
 		}
 	}
 	}
