@@ -29,9 +29,7 @@ return ui;
 public void setui (IPaystationUI ui) {
 	this.ui=ui;
 }
-public ICarpark getcarpark() {
-	
-}
+
 	@Override
 	public void ticketInserted(String barcode) {
 		// TODO Auto-generated method stub
