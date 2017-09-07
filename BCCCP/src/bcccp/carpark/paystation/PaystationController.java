@@ -37,8 +37,8 @@ this.ui = ui;
                     String data = barcodes.valueAt(0).displayValue;
 
                     Log.d(TAG, "Barcode detected: " + data);
-                    this.ui.beep();
-                    this.charge();
+                    //this.ui.beep();
+                    //this.charge();
 
                     return barcode;
                 }
