@@ -34,7 +34,7 @@ this.ui = ui;
 	public void receiveDetections(Detector.Detections<Barcode> barcode) {
                 final SparseArray<Barcode> barcodes = detections.getDetectedItems();
                 if (barcodes.size() != 0) {
-                    String data = barcodes.valueAt(0).displayValue;
+                    String data = barcode.valueAt(0).displayValue;
 
                     Log.d(TAG, "Barcode detected: " + data);
                     this.ui.beep();
@@ -45,9 +45,9 @@ this.ui = ui;
             }
         });
 
-        //if (!mBarcodeDetector.isOperational())
-         //   Log.w(TAG, "Detector dependencies are not yet available.");
-    //}
+        if (!mBarcodeDetector.isOperational())
+            Log.w(TAG, "Detector dependencies are not yet available.");
+    }
 
 
 
