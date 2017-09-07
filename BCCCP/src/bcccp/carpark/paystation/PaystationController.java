@@ -37,10 +37,10 @@ this.ui = ui;
                     String data = barcodes.valueAt(0).displayValue;
 
                     Log.d(TAG, "Barcode detected: " + data);
-                    //this.ui.beep();
-                    //this.charge();
+                    this.ui.beep();
+                    this.charge();
 
-                    return barcode;
+                    //return barcode;
                 }
             }
         });
@@ -61,7 +61,7 @@ this.ui = ui;
 			if(!this.carpark.isPaid()){
 			this.charge();
 		}else {
-			return "Thank you for your Payment. Have a Nive Day";
+			return "Thank you for your Payment. Have a Nice Day";
 		}
 		
 	}
