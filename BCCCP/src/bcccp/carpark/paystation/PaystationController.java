@@ -50,6 +50,7 @@ return (ui + " " + carpark);
                     String data = barcode.valueAt(0).displayValue;
 
                     Log.d(TAG, "Barcode detected: " + data);
+                    this.adhocTicket.enter(new Date().getTime());
                     this.ui.beep();
                     this.charge();
 
