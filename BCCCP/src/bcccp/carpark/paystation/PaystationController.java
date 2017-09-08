@@ -51,7 +51,7 @@ return (ui + " " + carpark);
 
                     Log.d(TAG, "Barcode detected: " + data);
                     this.adhocTicket.enter(new Date().getTime());
-                    this.ui.beep();
+                    //this.ui.beep();
                     this.charge();
 
                     return barcode;
