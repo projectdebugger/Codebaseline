@@ -43,10 +43,19 @@ return (ui + " " + carpark);
 	public void ticketInserted(String barcode) {
 		// TODO Auto-generated method stub
 		this.ui.display("Ticket Inserted");
-		this.adhocTicket.exit(new Date().getTime());
-		if (this.entryTime() != 0) {
-			
-		}
+		//this.adhocTicket.entry(new Date().getTime());
+		if (hours >= 24) {
+    price = (hours / 24)*30;
+    int h = hours%24;
+    int h4 = Math.min(h, 3)*2;
+    price += h4 +((hours)%24);
+
+} else if (hours < 24 && hours > 3) {
+    price = 9;
+    price += (hours - 3) * 1;
+} else {
+    price = hours * 3;
+}
 	}
 
 public static void public static void main(String[] args) {
