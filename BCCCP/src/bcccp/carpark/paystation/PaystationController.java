@@ -42,23 +42,9 @@ return (ui + " " + carpark);
 	@Override
 	public void ticketInserted(String barcode) {
 		// TODO Auto-generated method stub
-		
+		this.ui.display("Ticket Inserted");
 	}
-	public void receiveDetections(Detector.Detections<Barcode> barcode) {
-                //final SparseArray<Barcode> barcode = detections.getDetectedItems();
-                
-                    
-                    this.ui.beep();
-                    this.charge();
 
-                    return barcode;
-                }
-            }
-        });
-
-        //if (!mBarcodeDetector.isOperational())
-          //  Log.w(TAG, "Detector dependencies are not yet available.");
-    }
 public static void public static void main(String[] args) {
 	
 }
