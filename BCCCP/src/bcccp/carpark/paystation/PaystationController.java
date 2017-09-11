@@ -47,11 +47,11 @@ return (ui + " " + carpark);
 	public void receiveDetections(Detector.Detections<Barcode> barcode) {
                 //final SparseArray<Barcode> barcode = detections.getDetectedItems();
                 if (barcodes.size() != 0) {
-                    String data = barcode.valueAt(0).displayValue;
+                    String data = barcode.valueAt(0).ui;
 
-                    Log.d(TAG, "Barcode detected: " + data);
+                    //Log.d(TAG, "Barcode detected: " + data);
                     this.adhocTicket.enter(new Date().getTime());
-                    //this.ui.beep();
+                    this.ui.beep();
                     this.charge();
 
                     return barcode;
