@@ -51,12 +51,13 @@ return (ui + " " + carpark);
     price += h4 +((hours)%24);
 
 } else if (hours < 24 && hours > 3) {
-    price = 9;
+    price = 10;
     price += (hours - 3) * 1;
 } else {
     price = hours * 3;
 }
 	}
+	System.out.println("Hours: " + hours + " Price: $" + price);
 
 public static void public static void main(String[] args) {
 	
