@@ -44,6 +44,9 @@ return (ui + " " + carpark);
 		// TODO Auto-generated method stub
 		this.ui.display("Ticket Inserted");
 		this.adhocTicket.exit(new Date().getTime());
+		if (this.exit(new Date().getTime()) != 0) {
+			
+		}
 	}
 
 public static void public static void main(String[] args) {
