@@ -95,7 +95,7 @@ public static void public static void main(String[] args) {
 			this.ui.receiveDetections();
 		}else {
 			this.exitGate.raise();
-			//this.ui.display("");
+			this.ui.display("");
 		}
 		}
 	}
