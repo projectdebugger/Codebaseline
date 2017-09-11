@@ -59,8 +59,8 @@ return (ui + " " + carpark);
             }
         });
 
-        if (!mBarcodeDetector.isOperational())
-            Log.w(TAG, "Detector dependencies are not yet available.");
+        //if (!mBarcodeDetector.isOperational())
+          //  Log.w(TAG, "Detector dependencies are not yet available.");
     }
 public static void public static void main(String[] args) {
 	
