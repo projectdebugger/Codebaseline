@@ -1,7 +1,7 @@
-package carpark.paystation;
+package bcccp.carpark.paystation;
 
-import carpark.ICarpark;
-import tickets.adhoc.IAdhocTicket;
+import bcccp.carpark.ICarpark;
+import bcccp.tickets.adhoc.IAdhocTicket;
 
 public class PaystationController 
 		implements IPaystationController {
@@ -16,12 +16,6 @@ public class PaystationController
 
 	public PaystationController(ICarpark carpark, IPaystationUI ui) {
 		//TODO Implement constructor
-		/*
-Author: Santosh
-
-		*/
-this.carpark = carpark;
-this.ui = ui;
 	}
 
 
@@ -31,23 +25,6 @@ this.ui = ui;
 		// TODO Auto-generated method stub
 		
 	}
-	public void receiveDetections(Detector.Detections<Barcode> barcode) {
-                final SparseArray<Barcode> barcodes = detections.getDetectedItems();
-                if (barcodes.size() != 0) {
-                    String data = barcodes.valueAt(0).displayValue;
-
-                    Log.d(TAG, "Barcode detected: " + data);
-                    this.ui.beep();
-
-                    returnData(data);
-                }
-            }
-        });
-
-        if (!mBarcodeDetector.isOperational())
-            Log.w(TAG, "Detector dependencies are not yet available.");
-    }
-
 
 
 
@@ -62,15 +39,7 @@ this.ui = ui;
 	@Override
 	public void ticketTaken() {
 		// TODO Auto-generated method stub
-		/*
-			Author: Santosh
-		*/
-		if(!this.carpark.isPaid()){
-			this.exitGate.raise();
-			this.ui.display("");
-			this.ui.beep();
-		}
-	}
+		
 	}
 
 	

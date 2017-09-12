@@ -5,9 +5,7 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-
 import bcccp.carpark.entry.EntryController;
-
 import javax.swing.JButton;
 import java.awt.Font;
 import java.awt.Color;
@@ -22,7 +20,7 @@ public class CarSensor extends JFrame implements ICarSensor {
 	private JPanel contentPane;
 	private boolean carDetected;
 	private String detectorId;
-	
+	JButton detectorButton;
 	private List<ICarSensorResponder> responders;
 
 	/**
@@ -56,7 +54,7 @@ public class CarSensor extends JFrame implements ICarSensor {
 		contentPane.setLayout(null);
 		
 		carDetected = false;
-		JButton detectorButton = new JButton();
+		detectorButton = new JButton();
 		detectorButton.setFont(new Font("Tahoma", Font.PLAIN, 24));
 		detectorButton.setBounds(28, 24, 238, 135);
 		detectorButton.addActionListener(new ActionListener() {
@@ -70,6 +68,7 @@ public class CarSensor extends JFrame implements ICarSensor {
 					detectorButton.setBackground(Color.RED);
 					detectorButton.setText("No Car Detected");
 				}
+
 				EntryController.getInstance().carEventDetected(detectorId, carDetected);
 				// When ever an event occur, notify the controller
 				/*
@@ -83,7 +82,18 @@ public class CarSensor extends JFrame implements ICarSensor {
 		detectorButton.setText("No Car Detected");
 		contentPane.add(detectorButton);
 	}
-	
+	public void turnDetectorStutus(boolean status){
+		this.carDetected = status;
+		if (status) {
+			detectorButton.setBackground(Color.GREEN);
+			detectorButton.setText("Car Detected");
+			
+		}
+		else {
+			detectorButton.setBackground(Color.RED);
+			detectorButton.setText("No Car Detected");
+		}
+	}
 	public void registerResponder(ICarSensorResponder responder) {
 		if (!responders.contains(responder)) {
 			responders.add(responder);

@@ -35,7 +35,6 @@ public class EntryUI extends JFrame implements IEntryUI {
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
-				
 				try {
 					EntryUI frame = new EntryUI(100, 100);
 					frame.setVisible(true);
@@ -180,6 +179,7 @@ public class EntryUI extends JFrame implements IEntryUI {
 	
 	
 	private void takeTicket() {
+
 		EntryController.getInstance().ticketTaken();
 		ticketPrinterTextArea.setText("");
 		seasonTicketTextField.setText("");

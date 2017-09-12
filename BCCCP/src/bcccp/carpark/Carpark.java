@@ -21,7 +21,6 @@ public class Carpark implements ICarpark {
 	public Carpark(String name, int capacity, 
 			IAdhocTicketDAO adhocTicketDAO, 
 			ISeasonTicketDAO seasonTicketDAO) {
-		//TODO Implement constructor
 		/* Author: HOANG, Van Cuong - Project Debugger
 		 * 11613599
 		 * Date: 23-08-2017
@@ -32,8 +31,6 @@ public class Carpark implements ICarpark {
 		this.seasonTicketDAO = seasonTicketDAO;
 		numberOfCarsParked = 0;
 	}
-
-
 
 	@Override
 	public void register(ICarparkObserver observer) {
