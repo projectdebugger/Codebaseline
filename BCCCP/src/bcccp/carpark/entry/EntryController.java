@@ -101,6 +101,9 @@ public class EntryController
 			if(detected){
 				// Display push button on LCD screen
 				this.ui.display("PUSH BUTTON");
+				// Turn off the inside detector
+				this.insideSensor.turnDetectorStutus(false);
+				
 			}else{
 				this.ui.display("");
 			}
@@ -110,6 +113,9 @@ public class EntryController
 			this.entryGate.lower();
 			// Start counting time
 			entryTime = new Date().getTime();
+			//Switch the outside sensor to non detected
+			this.outsideSensor.turnDetectorStutus(false);
+			// TO DO
 		}
 	}
 }
