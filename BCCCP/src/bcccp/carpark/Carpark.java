@@ -111,7 +111,7 @@ public class Carpark implements ICarpark {
 	@Override
 	public void registerSeasonTicket(ISeasonTicket seasonTicket) {
 		// TODO Auto-generated method stub
-		
+		this.seasonTicketDAO.registerTicket(seasonTicket);
 	}
 
 
@@ -127,6 +127,11 @@ public class Carpark implements ICarpark {
 	@Override
 	public boolean isSeasonTicketValid(String ticketId) {
 		// TODO Auto-generated method stub
+		// Using season ticket DAO to check if this ticketID is Valid
+		// If we can find a ticket with the given id, return true
+		if(this.seasonTicketDAO.findTicketById(ticketId) != null)
+			return true;
+		// else, return false
 		return false;
 	}
 
