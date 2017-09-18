@@ -78,9 +78,9 @@ public class EntryController
 		// Else the user has typed in the barcode of the season ticket
 		System.out.println("The season ticket number entered is: " + barcode);
 		if(this.carpark.isSeasonTicketValid(barcode)){
-			this.ui.display("Season ticket accepted!");
+			this.ui.display("Ticket accepted!");
 		}else{
-			this.ui.display("Season ticket is not available!");
+			this.ui.display("Invalid ticket!");
 		}
 	}
 
