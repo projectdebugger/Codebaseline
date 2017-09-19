@@ -37,6 +37,7 @@ public class EntryController
 		this.ui = ui;
 		this.carpark = carpark;
 		this.entryGate = entryGate;
+		this.ui.registerController(this);
 		this.instance = this;
 	}
 
@@ -44,6 +45,7 @@ public class EntryController
 
 	@Override
 	public void buttonPushed() {
+		System.out.println("button pushed");
 		/* Author: HOANG Van Cuong
 		 * 
 		 * */
@@ -65,7 +67,21 @@ public class EntryController
 	@Override
 	public void ticketInserted(String barcode) {
 		// TODO Auto-generated method stub
-		
+		// Author: HOANG, Van Cuong - 11613599
+		// If the outside sensor detects no car, this method does nothing
+		if(!this.outsideSensor.carIsDetected())
+		{
+			// Display no car detected
+			this.ui.display("No car detected!");
+			return;
+		}
+		// Else the user has typed in the barcode of the season ticket
+		System.out.println("The season ticket number entered is: " + barcode);
+		if(this.carpark.isSeasonTicketValid(barcode)){
+			this.ui.display("Ticket accepted!");
+		}else{
+			this.ui.display("Invalid ticket!");
+		}
 	}
 
 
@@ -101,6 +117,9 @@ public class EntryController
 			if(detected){
 				// Display push button on LCD screen
 				this.ui.display("PUSH BUTTON");
+				// Turn off the inside detector
+				this.insideSensor.turnDetectorStutus(false);
+				
 			}else{
 				this.ui.display("");
 			}
@@ -110,6 +129,9 @@ public class EntryController
 			this.entryGate.lower();
 			// Start counting time
 			entryTime = new Date().getTime();
+			//Switch the outside sensor to non detected
+			this.outsideSensor.turnDetectorStutus(false);
+			// TO DO
 		}
 	}
 }
