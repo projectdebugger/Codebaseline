@@ -20,6 +20,7 @@ public class SeasonTicket implements ISeasonTicket {
 			             long endValidPeriod) {
 		//Author: HOANG, Van Cuong - 11613599
 		// Implementation of season ticket
+		System.out.println("Creating a new season ticket...");
 		this.ticketId = ticketId;
 		this.carparkId = carparkId;
 		this.startValidPeriod = startValidPeriod;
