@@ -153,7 +153,7 @@ public class EntryUI extends JFrame implements IEntryUI {
 	
 	@Override
 	public void display(String message) {
-		displayTextField.setText(message);	
+		displayTextField.setText(message);
 	}
 
 	
@@ -161,6 +161,7 @@ public class EntryUI extends JFrame implements IEntryUI {
 	@Override
 	public void beep() {
 		Toolkit.getDefaultToolkit().beep();	
+		System.out.println("Sound Played!");
 	}
 	
 	
