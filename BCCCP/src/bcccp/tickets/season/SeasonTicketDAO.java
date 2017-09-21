@@ -49,12 +49,17 @@ public class SeasonTicketDAO implements ISeasonTicketDAO {
 	@Override
 	public ISeasonTicket findTicketById(String ticketId) {
 		// TODO Auto-generated method stub
+		System.out.println("Looping all season tickets stored in list...");
 		for(ISeasonTicket s : seasonTickets){
-			System.out.println(s.getId());
+			//System.out.println(s.getId());
 			if(s.getId().equalsIgnoreCase(ticketId)){
+				// Found ticket
+				System.out.println("Season ticket number: " + ticketId + " found!");
 				return s;
 			}
 		}
+		// Ticket not found
+		System.out.println("Season ticket number: " + ticketId + " not found!");
 		return null;
 	}
 
