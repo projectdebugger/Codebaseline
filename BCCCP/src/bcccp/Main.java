@@ -37,18 +37,24 @@ public class Main {
 					CarSensor xis = new CarSensor("Exit Inside Sensor", 1330, 100);
 					Gate xgate = new Gate(1330, 320);
 					CarSensor xos = new CarSensor("Exit Outside Sensor", 1330, 440);
-					
+			
 					IAdhocTicketDAO adhocTicketDAO = new AdhocTicketDAO(new AdhocTicketFactory());
 					ISeasonTicketDAO seasonTicketDAO = new SeasonTicketDAO(new UsageRecordFactory());
 					
 					Carpark carpark = new Carpark("Bathurst Chase", 3, adhocTicketDAO, seasonTicketDAO);
-					
+					/* Author: HOANG, Van Cuong
+					 * Unit Testing season tickets validation
+					 * At start, two SeasonTickets are created 
+					 * */
+					System.out.println("Creating season tickets...");
 					ISeasonTicket t1 = new SeasonTicket("S1111","Bathurst Chase", 0L, 0L);
+					System.out.println("1 Season Ticket has been created. Ticket Number: " + t1.getId());
 					ISeasonTicket t2 = new SeasonTicket("S2222","Bathurst Chase", 0L, 0L);
-					
+					System.out.println("1 Season Ticket has been created. Ticket Number: " + t2.getId());
 					carpark.registerSeasonTicket(t1);
+					System.out.println("Season ticket number: " + t1.getId() + " has been registered for car park: " + carpark.getName());
 					carpark.registerSeasonTicket(t2);
-					
+					System.out.println("Season ticket number: " + t2.getId() + " has been registered for car park: " + carpark.getName());
 					@SuppressWarnings("unused")
 					EntryController entryController = 
 							new EntryController(carpark, egate, eos, eis, eui);
