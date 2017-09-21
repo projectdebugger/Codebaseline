@@ -20,8 +20,10 @@ public class SeasonTicketDAO implements ISeasonTicketDAO {
 
 	@Override
 	public void registerTicket(ISeasonTicket ticket) {
-		// TODO Auto-generated method stub
+		// Author: HOANG, Van Cuong
+		// Adding ticket to an array list
 		this.seasonTickets.add(ticket);
+		System.out.println("Season ticket number: " + ticket.getId() + " has been stored!");
 		//System.out.println();
 		
 	}
