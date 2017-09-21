@@ -20,6 +20,7 @@ public class AdhocTicketDAO  implements IAdhocTicketDAO  {
 	@Override
 	public IAdhocTicket createTicket(String carparkId) {
 		// TODO Auto-generated method stub
+		System.out.println("Creating an adhoc ticket!");
 		return this.factory.make(carparkId, this.currentTicketNo++);
 	}
 
