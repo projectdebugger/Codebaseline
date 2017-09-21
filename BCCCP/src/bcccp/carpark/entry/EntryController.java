@@ -105,9 +105,14 @@ public class EntryController
 		 * Adhoc customer takes adhoc ticket. Now raise the barrier
 		 * 
 		 * */
+		// User pushed take ticket button
+		System.out.println("Take ticket button pushed!");
 		if(!this.carpark.isFull()){
+			System.out.println("Raising entry gate...");
 			this.entryGate.raise();
+			System.out.println("Clearing UI Display...");
 			this.ui.display("");
+			System.out.println("Playing sound...");
 			this.ui.beep();
 		}
 	}
@@ -141,10 +146,13 @@ public class EntryController
 		}else{
 			// This is the inside sensor, when detecting a car, lower the barrier and reset
 			// the LCD screen
+			System.out.println("Inside sensor detected a car in!");
+			System.out.println("Lowering the entry gate...");
 			this.entryGate.lower();
 			// Start counting time
 			entryTime = new Date().getTime();
 			//Switch the outside sensor to non detected
+			System.out.println("Turning outside detector off...");
 			this.outsideSensor.turnDetectorStutus(false);
 			// TO DO
 		}
