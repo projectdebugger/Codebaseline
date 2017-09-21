@@ -87,11 +87,12 @@ public class CarSensor extends JFrame implements ICarSensor {
 		if (status) {
 			detectorButton.setBackground(Color.GREEN);
 			detectorButton.setText("Car Detected");
-			
+			System.out.println("Sensor status changed to ON");
 		}
 		else {
 			detectorButton.setBackground(Color.RED);
 			detectorButton.setText("No Car Detected");
+			System.out.println("Sensor status changed to OFF");
 		}
 	}
 	public void registerResponder(ICarSensorResponder responder) {
