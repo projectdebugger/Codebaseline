@@ -45,21 +45,30 @@ public class EntryController
 
 	@Override
 	public void buttonPushed() {
-		System.out.println("button pushed");
 		/* Author: HOANG Van Cuong
 		 * 
 		 * */
+		// User push button to requesting a new ad hoc ticket
+		System.out.println("User pushed Issue ad hoc ticket button!");
 		// Check if carpark is full
+		System.out.println("Checking if the car park is full...");
 		if(this.carpark.isFull()){
 			this.ui.display("Car park is full!");
+			System.out.println("Car park is full!");
 		}else{
+			System.out.println("Car park is not full");
+			// Issuing an adhoc ticket
+			System.out.println("Issueing an ad hoc ticket...");
 			this.adhocTicket = this.carpark.issueAdhocTicket();
+			System.out.println("An adhoc ticket has been issued!");
 			//this.ui.printTicket(id, tNo, entryDatetime, );
 			this.ui.display("Take ticket");
+			System.out.println("Take ticket message displayed!");
 			this.ui.printTicket(this.adhocTicket.getCarparkId(), this.adhocTicket.getTicketNo(), new Date().getTime(), this.adhocTicket.getBarcode());
+			System.out.println("Ad hoc ticket printed!");
 			this.adhocTicket.enter(new Date().getTime());
-		}
-		System.out.println("Issuing adhoc ticket");		
+			System.out.println("Captured time in for ad hoc ticket");
+		}	
 	}
 
 
