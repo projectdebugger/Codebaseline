@@ -75,12 +75,14 @@ public class EntryController
 			this.ui.display("No car detected!");
 			return;
 		}
-		// Else the user has typed in the barcode of the season ticket
+		// Else the user has typed in the bar code of the season ticket
 		System.out.println("The season ticket number entered is: " + barcode);
 		if(this.carpark.isSeasonTicketValid(barcode)){
 			this.ui.display("Ticket accepted!");
+			System.out.println("Season ticket has been accepted!");
 		}else{
 			this.ui.display("Invalid ticket!");
+			System.out.println("Season ticket has been rejected!");
 		}
 	}
 
@@ -115,13 +117,16 @@ public class EntryController
 		// If the outside detects, show PUSH BUTTON. Otherwise, lower the barrier
 		if(detectorId == this.outsideSensor.getId()){
 			if(detected){
+				System.out.println("A car has been detected by outside sensor...");
 				// Display push button on LCD screen
+				System.out.println("Display PUSH BUTTON message on UI...");
 				this.ui.display("PUSH BUTTON");
 				// Turn off the inside detector
 				this.insideSensor.turnDetectorStutus(false);
-				
+				System.out.println("Changed outside sensor status to false");
 			}else{
 				this.ui.display("");
+				System.out.println("Clear display screen done!");
 			}
 		}else{
 			// This is the inside sensor, when detecting a car, lower the barrier and reset
